@@ -96,15 +96,15 @@ public class PacMan extends JPanel implements ActionListener, KeyListener{
         public void updateVelocity(){
             if(this.direction == 'U'){
                 this.velocityX = 0;
-                this.velocityY = -tileSize/4;
+                this.velocityY = -tileSize/3;
             } else if(this.direction == 'D'){
                 this.velocityX = 0;
-                this.velocityY = tileSize/4;
+                this.velocityY = tileSize/3;
             } else if(this.direction == 'L'){
-                this.velocityX = -tileSize/4;
+                this.velocityX = -tileSize/3;
                 this.velocityY = 0;
             } else if(this.direction == 'R'){
-                this.velocityX = tileSize/4;
+                this.velocityX = tileSize/3;
                 this.velocityY = 0;
             }
         }
@@ -148,31 +148,31 @@ public class PacMan extends JPanel implements ActionListener, KeyListener{
     //X = wall, O = skip, P = pac man, ' ' = food, Ghosts: b = blue, o = orange, p = pink, r = red
     private String[] tileMap = {
             "XXXXXXXXXXXXXXXXXXX",
-            "X        X        X",
-            "X XX XXX X XXX XX X",
             "X                 X",
-            "X XX X XXXXX X XX X",
-            "X    X       X    X",
-            "XXXX XXXX XXXX XXXX",
-            "OOOX X       X XOOO",
-            "XXXX X XXrXX X XXXX",
-            "O       bpo       O",
-            "XXXX X XXXXX X XXXX",
-            "OOOX X       X XOOO",
-            "XXXX X XXXXX X XXXX",
-            "X        X        X",
-            "X XX XXX X XXX XX X",
-            "X  X     P     X  X",
-            "XX X X XXXXX X X XX",
-            "X    X   X   X    X",
-            "X XXXXXX X XXXXXX X",
+            "X XXX XXX XXX XXX X",
+            "X X   X     X   X X",
+            "X XXX X X X X XXX X",
+            "X                 X",
+            "XXXXX   XXX   XXXXX",
+            "OOOX           XOOO",
+            "XXXX   XbrpX   XXXX",
+            "O         o       O",
+            "XXXX   XXXXX   XXXX",
+            "OOOX           XOOO",
+            "XXXX    X X    XXXX",
+            "X                 X",
+            "X XXX  XXXXXX XXX X",
+            "X   X    P    X   X",
+            "XXX X  XXXXXX X XXX",
+            "X                 X",
+            "X XXXXXXXXXXXXXXX X",
             "X                 X",
             "XXXXXXXXXXXXXXXXXXX"
     };
 
     public PacMan(){
         setPreferredSize(new Dimension(boardWidth, boardHeight));
-        setBackground(Color.black);
+        setBackground(Color.lightGray);
         addKeyListener(this);
         setFocusable(true);
 
